@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENSA-KNUST ACADEMIC MENTORSHIP BOARD</title>
+   
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .logo {
+            width: 100%;
+            max-height: 350px; /* Adjust the max-height to make it vertically short */
+            object-fit: cover; /* Ensures the image covers the area without stretching */
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 0 auto;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        .required::before {
+            content: " *";
+            color: red;
+        }
+
+        /* Style for input fields and textarea */
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #e0e0e0; /* Default background color */
+        }
+
+        input[type="text"]:focus, select:focus, textarea:focus {
+            background-color: #4ba1db; /* Background color on focus */
+            border-color: #555; /* Border color on focus */
+        }
+
+        /* Inline radio buttons */
+        .radio-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; /* Additional margin below radio buttons */
+        }
+
+        .radio-group input {
+            margin-right: 5px; /* Adjust the space between radio button and label */
+        }
+
+        .radio-group label {
+            margin-right: 10px; /* Adjust the space between labels */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Logo at the top -->
+        <img src="logo.jpg" alt="Logo" class="logo">
+        
+        <h1>PENSA-KNUST ACADEMIC MENTORSHIP BOARD</h1>
+        <p>Kindly fill out the form below if you are interested in volunteering <br>
+            as an academic mentor in PENSA-KNUST. God bless you for your<br> 
+            willingness to serve in this regard.</p>
+        <form action="https://formspree.io/f/xvgolblv" method="post">
+            <label for="name" class="required"><b>Name:</b></label>
+            <input type="text" id="Name" name="Name" required>
+            
+            <label for="contact" class="required"><b>Whatsapp Contact:</b></label>
+            <input type="text" id="Contact" name="Contact" required>
+            
+            <label for="school" class="required"><b>School Voda:</b></label>
+            <input type="text" id="School Voda" name="School Voda" required>
+            
+            <label for="Gender" class="required"><b>Gender:</b></label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+            </div>
+            
+            <label for="Programme" class="required"><b>Programme of Study:</b></label>
+            <input type="text" id="Programme" name="Programme" required>
+            
+            <label for="Year" class="required"><b>Year:</b></label>
+            <select id="Year" name="Year" required>
+                <option value="Year 2">Year 2</option>
+                <option value="Year 3">Year 3</option>
+                <option value="Year 4">Year 4</option>
+                <option value="Year 5">Year 5</option>
+                <option value="Year 6">Year 6</option>
+            </select>
+
+            <label for="Department In PENSA" class="required"><b>Department In PENSA:</b></label>
+            <select id="Department In PENSA" name="Department In PENSA" required>
+                <option value="Media">Media Department</option>
+                <option value="Music and Drama">Music and Drama Department</option>
+                <option value="Evangelism">Evangelism Department</option>
+                <option value="Bible Study">Bible Study Department</option>
+                <option value="Ushering">Ushering Department</option>
+                <option value="Editorial">Editorial Department</option>
+                <option value="Organizing">Organizing Department</option>
+            </select>
+            
+            <label for="Reason" class="required"><b>Why would you like to become a mentor:</b></label>
+            <textarea id="Reason" name="Reason" rows="5" cols="40" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
